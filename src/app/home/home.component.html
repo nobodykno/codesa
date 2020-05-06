@@ -1,0 +1,17 @@
+<ng-container>
+    <p-table [value]="userData">
+      <ng-template pTemplate="header">
+          <tr>
+            <th *ngFor="let header of userObj"> {{ header }} </th>
+          </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-user>
+          <tr (click)="showUserData(user)">
+              <td>{{user.id}}</td>
+              <td>{{user.Name}}</td>
+              <td>{{user.email}}</td>
+              <td>{{user.companyname}}</td>
+          </tr>
+      </ng-template>
+    </p-table>
+</ng-container>
